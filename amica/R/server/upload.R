@@ -505,9 +505,9 @@ observeEvent(input$submitAnalysis, {
         }
       }
       ### ensure either pilot or replicated experiment, but not mixed
-      for (idx in 1:nrow(contrastsData) ) {
-        group1 <- contrastsData[idx, 1]
-        group2 <- contrastsData[idx, 2]
+      for (idx in 1:nrow(contrastData) ) {
+        group1 <- contrastData[idx, 1]
+        group2 <- contrastData[idx, 2]
         
         nGroup1 <- length(reacValues$expDesign$samples[reacValues$expDesign$groups==group1])
         nGroup2 <- length(reacValues$expDesign$samples[reacValues$expDesign$groups==group2])
